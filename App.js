@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import GeoLocation from "./assets/js/GeoLocation";
-import SomeAPI from "./assets/js/SomeAPI";
+import Advice from "./assets/js/Advice";
 import Home from "./assets/js/Home";
 
 const App = () => {
@@ -24,8 +24,8 @@ const App = () => {
         return <Home />;
       case "GeoLocation":
         return <GeoLocation />;
-      case "SomeAPI":
-        return <SomeAPI />;
+      case "Advice":
+        return <Advice />;
       default:
         return null;
     }
@@ -35,7 +35,7 @@ const App = () => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.title}>Portfolio</Text>
+        <Text style={styles.title}>GeoLocation and API</Text>
         <TouchableOpacity onPress={toggleMenu} style={styles.menuIcon}>
           <MaterialCommunityIcons name="menu" size={30} color="lightgrey" />
         </TouchableOpacity>
@@ -58,9 +58,9 @@ const App = () => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.menuItem}
-            onPress={() => navigateTo("SomeAPI")}
+            onPress={() => navigateTo("Advice")}
           >
-            <Text style={styles.menuItemText}>SomeAPI</Text>
+            <Text style={styles.menuItemText}>Advice</Text>
           </TouchableOpacity>
         </View>
       )}
